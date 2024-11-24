@@ -14,7 +14,7 @@
     'use strict';
 
     setTimeout(function() {
-        
+
         if (window.location.hash.startsWith('#/tSurvey/')) {
 
         const evaluationBtn = doc.createElement('button');
@@ -77,6 +77,6 @@
                 }
             }, 250);
         });
-       }     
+       }
     }, 2000);
 })(window, document);
