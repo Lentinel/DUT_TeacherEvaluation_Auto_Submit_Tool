@@ -66,7 +66,6 @@
                         console.log("Submitting evaluation...");
                         submitButton.click();
                     }
-                    }
                 }, 300);
             });
         }
