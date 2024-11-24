@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  DUT_TeacherEvaluation_Auto_Submit_Tool
 // @author       Lentinel
-// @match        *:/jxgl.dlut.edu.cn/evaluation-student-frontend/#/tSurvey/*
+// @match        *://jxgl.dlut.edu.cn/evaluation-student-frontend/#/tSurvey/*
 // @icon         https://www.dlut.edu.cn/images/favicon.ico
 // @grant        none
 // @license      MIT
