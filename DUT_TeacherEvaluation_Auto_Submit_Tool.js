@@ -14,6 +14,8 @@
     'use strict';
 
     setTimeout(function() {
+        
+        if (window.location.hash.startsWith('#/tSurvey/')) {
 
         const evaluationBtn = doc.createElement('button');
         const containerDiv = doc.querySelector('div[class="main-container"]');
@@ -73,7 +75,8 @@
                 if (submitButton) {
                     submitButton.click();
                 }
-            }, 200);
+            }, 250);
         });
-    }, 3000);
+       }     
+    }, 2000);
 })(window, document);
