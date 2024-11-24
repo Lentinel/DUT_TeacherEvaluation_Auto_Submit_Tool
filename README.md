@@ -1,0 +1,12 @@
+# DUT_TeacherEvaluation_Auto_Submit_Tool
+实现 大连理工大学教务系统学生总结性评教问卷 的自动填写及提交
+
+参考了 [Nouchi-Kousu 的项目](https://github.com/Nouchi-Kousu/Dlut_auto-StudentSummativeEvaluation)。
+
+本工具为 Tampermonkey 油猴脚本，具体安装方法请自行搜索。
+
+目前实现的功能是：进入问卷页面后，等待3s后点击页面左下角按钮实现自动填写并提交。
+
+暂时未实现全自动提交所有教师的问卷的功能，可能后续会写，看我心情233333。
+
+截至目前该脚本功能正常。由于未来问卷系统可能出现变化，如果该脚本变得不可用，欢迎提 issue。
