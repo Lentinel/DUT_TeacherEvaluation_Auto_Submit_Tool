@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         大连理工教师评教问卷自动提交工具
 // @namespace    https://github.com/Lentinel/DUT_TeacherEvaluation_Auto_Submit_Tool
-// @version      1.1
+// @version      1.2
 // @description  DUT_TeacherEvaluation_Auto_Submit_Tool
 // @author       Lentinel
 // @match        *://jxgl.dlut.edu.cn/evaluation-student-frontend/*
@@ -39,7 +39,7 @@
     }
 
     setTimeout(function () {
-        showAutoCloseAlert('请在进入教师评教问卷页面后再点击“点我评教！”按钮。<br><br>请不要在问卷页面刷新网页，如需刷新，请关闭当前页面后重新从教务系统进入问卷，否则会导致问卷无法提交！', 5000);
+        showAutoCloseAlert('请在进入教师评教问卷页面后再点击“点我评教！”按钮。<br><br>请不要在问卷页面刷新网页，如需刷新，请关闭当前页面后重新从教务系统进入问卷，否则会导致问卷无法提交！', 10000);
 
         const containerDiv = doc.querySelector('div[class="main-container"]');
         if (!containerDiv) return;
@@ -90,24 +90,24 @@
                 }
             });
 
-            setTimeout(function() {
-        const scoreInput = doc.querySelector('input.el-input__inner[placeholder="请选择"]');
-        if (scoreInput) {
-            scoreInput.click();
+            setTimeout(function () {
+                const scoreInput = doc.querySelector('input.el-input__inner[placeholder="请选择"]');
+                if (scoreInput) {
+                    scoreInput.click();
 
-            setTimeout(function() {
-                const scoreOption = doc.querySelector('ul.el-scrollbar__view > li.el-select-dropdown__item:last-child');
-                if (scoreOption) {
-                    scoreOption.click();
-                    console.log('已选择 100 分');
+                    setTimeout(function () {
+                        const scoreOption = doc.querySelector('ul.el-scrollbar__view > li.el-select-dropdown__item:last-child');
+                        if (scoreOption) {
+                            scoreOption.click();
+                            console.log('已选择 100 分');
+                        } else {
+                            console.error('评分选项未找到');
+                        }
+                    }, 150);
                 } else {
-                    console.error('评分选项未找到');
+                    console.error('评分输入框未找到');
                 }
-            }, 150);
-        } else {
-            console.error('评分输入框未找到');
-        }
-    }, 300);
+            }, 300);
 
             const textareaElement = doc.querySelector('textarea');
             if (textareaElement && textareaElement.value === "") {
