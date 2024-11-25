@@ -37,6 +37,7 @@
                     "课程内容": "课程内容对我非常有用，课程所学对我今后学习、工作和生活有很大价值。",
                     "教学设计": "教学设计精心，教学组织非常好，师生互动非常活跃，老师讲课或指导有方。",
                     "课程资源": "课程资源丰富全面，教材教辅资源齐备，课内外资源互补，很好地满足学习需求。",
+                    "教师讲解": "老师注重因材施教，对我指导非常到位。",
                     "学习目标": "我非常清楚该课程的学习目标。",
                     "学习产出": "我能很好地掌握该课程的知识和能力要点，能运用课程所学分析解决复杂问题，综合能力得到很好的训练和提升。",
                     "老师在授课过程中是否有效地融入了思政元素？": "是",
@@ -51,14 +52,12 @@
                     }
                 });
 
-                // 填写评论
                 const textareaElement = doc.querySelector('textarea');
                 if (textareaElement && textareaElement.value === "") {
                     textareaElement.value = "非常喜欢这门课！";
                     textareaElement.dispatchEvent(new InputEvent("input"));
                 }
 
-                // 滚动到底部并自动点击提交
                 window.scrollTo(0, doc.body.scrollHeight);
                 setTimeout(function() {
                     const submitButton = doc.querySelector('button.el-button--primary');
@@ -66,8 +65,8 @@
                         console.log("Submitting evaluation...");
                         submitButton.click();
                     }
-                }, 300);
+                }, 500);
             });
         }
-    }, 2000); 
+    }, 3000); 
 })(window, document);
