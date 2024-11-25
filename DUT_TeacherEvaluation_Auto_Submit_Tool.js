@@ -90,24 +90,24 @@
                 }
             });
 
-            setTimeout(function() {
-        const scoreInput = doc.querySelector('input.el-input__inner[placeholder="请选择"]');
-        if (scoreInput) {
-            scoreInput.click();
+            setTimeout(function () {
+                const scoreInput = doc.querySelector('input.el-input__inner[placeholder="请选择"]');
+                if (scoreInput) {
+                    scoreInput.click();
 
-            setTimeout(function() {
-                const scoreOption = doc.querySelector('ul.el-scrollbar__view > li.el-select-dropdown__item:last-child');
-                if (scoreOption) {
-                    scoreOption.click();
-                    console.log('已选择 100 分');
+                    setTimeout(function () {
+                        const scoreOption = doc.querySelector('ul.el-scrollbar__view > li.el-select-dropdown__item:last-child');
+                        if (scoreOption) {
+                            scoreOption.click();
+                            console.log('已选择 100 分');
+                        } else {
+                            console.error('评分选项未找到');
+                        }
+                    }, 150);
                 } else {
-                    console.error('评分选项未找到');
+                    console.error('评分输入框未找到');
                 }
-            }, 150);
-        } else {
-            console.error('评分输入框未找到');
-        }
-    }, 300);
+            }, 300);
 
             const textareaElement = doc.querySelector('textarea');
             if (textareaElement && textareaElement.value === "") {
