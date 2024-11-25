@@ -133,7 +133,7 @@
                     console.log("Submitting evaluation...");
                     submitButton.click();
                 }
-            }, 250);
+            }, 1000);
         });
 
     }, 2000);
