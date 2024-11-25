@@ -1,5 +1,5 @@
 # DUT_TeacherEvaluation_Auto_Submit_Tool
-实现 大连理工大学教务系统学生总结性评教问卷 的自动填写及提交
+实现 大连理工大学教务系统学生总结性评教问卷 的 自动填写及提交 的 脚本
 
 参考了 [Nouchi-Kousu 的项目](https://github.com/Nouchi-Kousu/Dlut_auto-StudentSummativeEvaluation)。感谢 [@Houyi2333](https://github.com/Houyi2333) 对本项目的贡献。
 
