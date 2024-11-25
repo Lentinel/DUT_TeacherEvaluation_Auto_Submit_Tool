@@ -12,10 +12,34 @@
 
 (function (global, doc) {
     'use strict';
+    function showAutoCloseAlert(message, duration = 3000) {
+        const alertBox = document.createElement('div');
+        alertBox.textContent = message;
+        Object.assign(alertBox.style, {
+            position: 'fixed',
+            top: '20px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            background: 'rgba(0, 0, 0, 0.8)',
+            color: 'white',
+            padding: '10px 20px',
+            borderRadius: '5px',
+            zIndex: '1000',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
+            fontSize: '14px',
+            textAlign: 'center',
+            opacity: '1',
+            transition: 'opacity 0.5s ease',
+        });
+        document.body.appendChild(alertBox);
+        setTimeout(() => {
+            alertBox.style.opacity = '0';
+            setTimeout(() => alertBox.remove(), 500);
+        }, duration);
+    }
 
     setTimeout(function () {
-
-
+        showAutoCloseAlert('请不要在 按任务评教 - 学生端评教系统 点击按钮，需要进入指定教师评教页面后点击“点我评教”', 5000);
 
         const containerDiv = doc.querySelector('div[class="main-container"]');
         if (!containerDiv) return;
@@ -60,7 +84,7 @@
                 textareaElement.dispatchEvent(new InputEvent("input"));
             }
 
-            // 并自动点击提交
+            // 自动点击提交
             setTimeout(function () {
                 const submitButton = doc.querySelector('button.el-button--primary');
                 if (submitButton) {
