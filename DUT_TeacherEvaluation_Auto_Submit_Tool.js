@@ -8,6 +8,8 @@
 // @icon         https://www.dlut.edu.cn/images/favicon.ico
 // @grant        none
 // @license      MIT
+// @downloadURL https://update.greasyfork.org/scripts/518819/%E5%A4%A7%E8%BF%9E%E7%90%86%E5%B7%A5%E6%95%99%E5%B8%88%E8%AF%84%E6%95%99%E9%97%AE%E5%8D%B7%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4%E5%B7%A5%E5%85%B7.user.js
+// @updateURL https://update.greasyfork.org/scripts/518819/%E5%A4%A7%E8%BF%9E%E7%90%86%E5%B7%A5%E6%95%99%E5%B8%88%E8%AF%84%E6%95%99%E9%97%AE%E5%8D%B7%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4%E5%B7%A5%E5%85%B7.meta.js
 // ==/UserScript==
 
 (function (global, doc) {
