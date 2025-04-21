@@ -12,7 +12,7 @@
 // @updateURL https://update.greasyfork.org/scripts/518819/%E5%A4%A7%E8%BF%9E%E7%90%86%E5%B7%A5%E6%95%99%E5%B8%88%E8%AF%84%E6%95%99%E9%97%AE%E5%8D%B7%E8%87%AA%E5%8A%A8%E6%8F%90%E4%BA%A4%E5%B7%A5%E5%85%B7.meta.js
 // ==/UserScript==
 
-(function (global, doc) {
+(function (window, document) {
     'use strict';
     function showAutoCloseAlert(message, duration = 3000) {
         const alertBox = document.createElement('div');
@@ -43,10 +43,10 @@
     setTimeout(function () {
         showAutoCloseAlert('请在进入教师评教问卷页面后再点击“点我评教！”按钮。<br><br>请不要在问卷页面刷新网页，如需刷新，请关闭当前页面后重新从教务系统进入问卷，否则会导致问卷无法提交！', 10000);
 
-        const containerDiv = doc.querySelector('div[class="main-container"]');
+        const containerDiv = document.querySelector('div[class="main-container"]');
         if (!containerDiv) return;
 
-        const newButton = doc.createElement('button');
+        const newButton = document.createElement('button');
         newButton.className = "el-button el-button--primary el-button--small";
         newButton.innerHTML = '<span data-id="q">点我评教！</span>';
         containerDiv.appendChild(newButton);
@@ -54,7 +54,7 @@
         newButton.addEventListener('click', function () {
             console.log("Starting evaluation...");
 
-            const radioButtons = doc.querySelectorAll('input[type="radio"]');
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
             const targetText = {
                 "教师对学生是否存在过于严厉、对考核要求过于严格的现象？": "否",
                 "您会向学弟学妹推荐该老师的课程吗？": "是",
@@ -93,12 +93,12 @@
             });
 
             setTimeout(function () {
-                const scoreInput = doc.querySelector('input.el-input__inner[placeholder="请选择"]');
+                const scoreInput = document.querySelector('input.el-input__inner[placeholder="请选择"]');
                 if (scoreInput) {
                     scoreInput.click();
 
                     setTimeout(function () {
-                        const scoreOption = doc.querySelector('ul.el-scrollbar__view > li.el-select-dropdown__item:last-child');
+                        const scoreOption = document.querySelector('ul.el-scrollbar__view > li.el-select-dropdown__item:last-child');
                         if (scoreOption) {
                             scoreOption.click();
                             console.log('已选择 100 分');
@@ -111,7 +111,7 @@
                 }
             }, 300);
 
-            const textareaElement = doc.querySelector('textarea');
+            const textareaElement = document.querySelector('textarea');
             if (textareaElement && textareaElement.value === "") {
                 textareaElement.value = "非常喜欢这门课！";
                 textareaElement.dispatchEvent(new InputEvent("input"));
@@ -130,7 +130,7 @@
             }
 
             setTimeout(function () {
-                const submitButton = doc.querySelector('button.el-button--primary');
+                const submitButton = document.querySelector('button.el-button--primary');
                 if (submitButton) {
                     console.log("Submitting evaluation...");
                     submitButton.click();
