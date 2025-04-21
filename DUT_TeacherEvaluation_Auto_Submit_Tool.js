@@ -40,7 +40,7 @@
         }, duration);
     }
 
-    setTimeout(function () {
+    function evaluateTeacher() {
         showAutoCloseAlert('请在进入教师评教问卷页面后再点击“点我评教！”按钮。<br><br>请不要在问卷页面刷新网页，如需刷新，请关闭当前页面后重新从教务系统进入问卷，否则会导致问卷无法提交！', 10000);
 
         const containerDiv = document.querySelector('div[class="main-container"]');
@@ -137,6 +137,19 @@
                 }
             }, 1000);
         });
+    }
 
-    }, 2000);
+    // 监听页面变化
+    const observer = new MutationObserver((mutationsList, observer) => {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'childList' && mutation.target === document.body) {
+                if (document.querySelector('div[class="main-container"]')) {
+                    observer.disconnect();
+                    evaluateTeacher();
+                    break;
+                }
+            }
+        }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
 })(window, document);
