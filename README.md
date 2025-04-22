@@ -11,7 +11,7 @@
 
 ---
 
-如果提交问卷时提示 500 错误，请关闭问卷页面并刷新 http://jxgl.dlut.edu.cn/evaluation-student-frontend/#/byTask 页面即可。目前没搞明白为什么会出这个问题。
+如果提交问卷时提示 500 错误，请关闭问卷页面并刷新 http://jxgl.dlut.edu.cn/evaluation-student-frontend/#/byTask 页面即可。目前没搞明白为什么会出现这个问题。
 
 ---
 
