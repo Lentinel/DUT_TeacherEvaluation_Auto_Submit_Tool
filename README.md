@@ -11,6 +11,10 @@
 
 ---
 
+如果提交问卷时提示 500 错误，请关闭问卷页面并刷新 http://jxgl.dlut.edu.cn/evaluation-student-frontend/#/byTask 页面即可。目前没搞明白为什么会出这个问题。
+
+---
+
 本工具为 Tampermonkey 油猴脚本，安装方法见下：
 
 以 暴力猴 为例，添加自定义脚本，直接把脚本的 JavaScript 代码粘贴进去保存即可：
