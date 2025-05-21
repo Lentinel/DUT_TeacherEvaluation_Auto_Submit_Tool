@@ -1,7 +1,7 @@
 # DUT_TeacherEvaluation_Auto_Submit_Tool
 实现 大连理工大学教务系统学生总结性评教问卷 的 一键自动填写及提交 的 油猴脚本工具
 
-参考了 [Nouchi-Kousu 的项目](https://github.com/Nouchi-Kousu/Dlut_auto-StudentSummativeEvaluation)。感谢 [@Houyi2333](https://github.com/Houyi2333) 和 [@Nouchi-Kousu/]([https://github.com/Houyi2333](https://github.com/Nouchi-Kousu) 对本项目的贡献。
+参考了 [Nouchi-Kousu 的项目](https://github.com/Nouchi-Kousu/Dlut_auto-StudentSummativeEvaluation)。感谢 [@Houyi2333](https://github.com/Houyi2333) 和 [@Nouchi-Kousu/](https://github.com/Nouchi-Kousu) 对本项目的贡献。
 
 目前实现的功能是：进入每位老师的问卷页面后，点击页面左下角按钮实现一键自动填写并提交。暂时没实现一键提交所有教师的问卷的功能，可能什么时候有时间了会写吧。
 
