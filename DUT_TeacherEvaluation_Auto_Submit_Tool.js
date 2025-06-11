@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         大连理工教师评教问卷自动提交工具
 // @namespace    https://github.com/Lentinel/DUT_TeacherEvaluation_Auto_Submit_Tool
-// @version      1.5
+// @version      1.6
 // @description  DUT_TeacherEvaluation_Auto_Submit_Tool
 // @author       Lentinel
 // @match        *://jxgl.dlut.edu.cn/evaluation-student-frontend/*
