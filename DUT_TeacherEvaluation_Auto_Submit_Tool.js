@@ -41,7 +41,7 @@
     }
 
     setTimeout(function () {
-        showAutoCloseAlert('请在进入教师评教问卷页面后再点击“点我评教！”按钮。<br><br>请不要在问卷页面刷新网页，如需刷新，请关闭当前页面后重新从教务系统进入问卷，否则会导致问卷无法提交！', 10000);
+        showAutoCloseAlert('请在进入教师评教问卷页面后再点击“点我评教！”按钮。<br><br>1分钟内最多只能提交4份问卷，请慢点交！<br><br>请不要在问卷页面刷新网页，如需刷新，请关闭当前页面后重新从教务系统进入问卷，否则会导致问卷无法提交！', 10000);
 
         const containerDiv = doc.querySelector('div[class="main-container"]');
         if (!containerDiv) return;
